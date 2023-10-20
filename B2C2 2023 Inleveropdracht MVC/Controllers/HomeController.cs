@@ -18,7 +18,22 @@ namespace B2C2_2023_Inleveropdracht_MVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
+        public IActionResult Historie()
+        {
+            return View();
+        }
+
+        public IActionResult Profiel()
+        {
+            return View();
+        }
+
+        public IActionResult Winkelwagen()
         {
             return View();
         }
