@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Menu";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Prijs
+            </th>
+            <th>
+                Beschrijving
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td width="30%">
+                    @item.Naam
+                </td>
+                <td width="20%">
+                    @item.Prijs
+                </td>
+                <td width="30%">
+                    @item.Beschrijving
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

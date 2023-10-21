@@ -18,11 +18,6 @@ namespace B2C2_2023_Inleveropdracht_MVC.Controllers
             return View();
         }
 
-        public IActionResult Menu()
-        {
-            return View();
-        }
-
         public IActionResult Historie()
         {
             return View();
