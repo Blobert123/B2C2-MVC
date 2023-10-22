@@ -176,6 +176,11 @@ namespace B2C2_2023_Inleveropdracht_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Naam")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<string>("Beschrijving")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -192,6 +197,7 @@ namespace B2C2_2023_Inleveropdracht_MVC.Migrations
                         new
                         {
                             Id = 1,
+                            Naam = "Frikandel",
                             Beschrijving = "Product beschrijving 123",
                             Prijs = 5
                         });

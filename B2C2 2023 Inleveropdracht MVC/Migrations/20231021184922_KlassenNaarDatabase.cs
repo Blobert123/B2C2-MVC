@@ -87,6 +87,7 @@ namespace B2C2_2023_Inleveropdracht_MVC.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Naam = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Prijs = table.Column<int>(type: "int", nullable: false),
                     Beschrijving = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false)
                 },

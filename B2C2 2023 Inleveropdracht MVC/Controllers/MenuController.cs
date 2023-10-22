@@ -18,5 +18,23 @@ namespace B2C2_2023_Inleveropdracht_MVC.Controllers
             IEnumerable<Product> productLijst = _db.Products;
             return View(productLijst);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Product prod)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Products.Add(prod);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(prod);
+        }
     }
 }
