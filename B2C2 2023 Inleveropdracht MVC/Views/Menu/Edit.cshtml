@@ -1,10 +1,10 @@
 ﻿@model Product
 
-<form method="post" asp-action="Create">
+<form method="post" asp-action="Edit">
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
 			<h2 class="text-primary">
-				Product toevoegen
+				Product wijzigen
 			</h2>
 			<hr />
 		</div>
@@ -23,7 +23,7 @@
 			<input asp-for="Beschrijving" class="form-control"/>
 			<span asp-validation-for="Beschrijving" class="text-danger"></span>
 		</div>
-		<button type="submit" class="btn btn-primary" style="width:150px">Toevoegen</button>
+		<button type="submit" class="btn btn-primary" style="width:150px">Wijzigen</button>
 		<a asp-controller="Menu" asp-action="Index" class="btn btn-secondary" style="width:150px">Terug</a>
 	</div>
 </form>

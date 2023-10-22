@@ -30,6 +30,7 @@
             <th>
                 Beschrijving
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -45,6 +46,19 @@
                 <td width="30%">
                     @item.Beschrijving
                 </td>
+                <td width="1%">
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Menu" asp-action="Edit" asp-route-id="@item.Id">
+                            <i class="bi bi-pencil-square"></i>
+                            Wijzig
+                        </a>
+                        <a asp-controller="Menu" asp-action="Delete" asp-route-id="@item.Id">
+                            <i class="bi bi-pencil-square"></i>
+                            Verwijderen
+                        </a>
+                    </div>
+                </td>
+
             </tr>
         }
     </tbody>
